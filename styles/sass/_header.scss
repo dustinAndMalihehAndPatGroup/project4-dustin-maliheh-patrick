@@ -1,4 +1,25 @@
 // testing sass works
-body {
-	background: green;
+header {
+	background-color: $dark-color;
+
+	h1 {
+		color:$accent-color-one;
+		font-size: 6rem;
+		padding: 2rem;
+		text-align: center;
+	}
+
+	form {
+		text-align: center;
+	}
+
+	input[type='text'] {
+		width: 60%;
+		margin-bottom: 3rem;
+		padding: 16.5px 20px 9px 20px;
+	}
+
+	button[type='submit'] {
+		margin-left: -0.5rem;
+	}
 }

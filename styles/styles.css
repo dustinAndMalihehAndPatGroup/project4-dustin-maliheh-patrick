@@ -348,8 +348,8 @@ textarea {
 .btn {
   display: inline-block;
   border: none;
-  background: #fff;
-  color: #000;
+  background: #DBA58E;
+  color: #425163;
   padding: 1rem 4rem;
   text-decoration: none;
   font-size: 2rem;
@@ -358,13 +358,77 @@ textarea {
 }
 
 .btn:hover {
-  background: #000;
+  background: #9ED1C3;
 }
 
 .btn:focus {
   border: 1px solid;
 }
 
-body {
-  background: green;
+header {
+  background-color: #425163;
+}
+
+header h1 {
+  color: #DBA58E;
+  font-size: 6rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+header form {
+  text-align: center;
+}
+
+header input[type='text'] {
+  width: 60%;
+  margin-bottom: 3rem;
+  padding: 16.5px 20px 9px 20px;
+}
+
+header button[type='submit'] {
+  margin-left: -0.5rem;
+}
+
+main {
+  background-color: #6A7A6C;
+}
+
+.plantWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 3rem;
+}
+
+.plantsInfoBox {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-right: 3rem;
+  margin-bottom: 3rem;
+  max-width: 300px;
+}
+
+.plantsInfoBox h2 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.plantsInfoBox ul {
+  font-size: 1.5rem;
+}
+
+footer {
+  background: #425163;
+  padding: 2rem;
+  color: #DBA58E;
+  text-align: center;
+  font-size: 1.5rem;
 }
