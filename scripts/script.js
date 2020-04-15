@@ -17,19 +17,57 @@ plantApp.retrieveData = () => {
 				q: `apple`,
 			},
 		},
-	}).then((data) => {
-		console.log(data);
-		plantApp.firstCall(data);
+	}).then((request) => {
+		console.log(request);
+		plantApp.firstCall(request);
 	});
 };
 
 plantApp.firstCall = (data) => {
 	plantApp.linkData = data;
 
-	plantApp.linkData.forEach((data) => {
-		console.log(data.scientific_name, data.link, data.id);
+	plantApp.idArray = plantApp.linkData.map((data) => {
+		// console.log(data.scientific_name, data.link, data.id);
+		return data.link;
 	});
+	console.log(plantApp.idArray);
+	plantApp.newFunk(plantApp.idArray);
 };
+
+plantApp.newFunk = (hi) => {
+
+	plantApp.stem = hi
+	// console.log(hi, 'newfunkkk');
+
+	 plantApp.storedpromise = plantApp.forEach ((hi) => {
+	
+		 return $.ajax({
+			 url: `http://proxy.hackeryou.com`,
+			 method: `GET`,
+			 dataType: `json`,
+			 data: {
+				 reqUrl: hi,
+				 params: {
+					 token: plantApp.apiToken,
+					 format: `json`,
+				 },
+			 },
+		 })
+		 
+		}) 
+		console.log(plantApp.storedpromise);
+	 
+	}
+	
+
+
+
+
+
+plantApp.bagOfId = [];
+
+
+// for (let i = 0; i<= )
 
 plantApp.init = () => {
 	plantApp.retrieveData();
@@ -38,6 +76,13 @@ plantApp.init = () => {
 $(function () {
 	plantApp.init();
 });
+
+
+
+
+
+
+
 
 //     }).then((result) => {
 //         const artArray = result.artObjects;
@@ -78,3 +123,38 @@ $(function () {
 //         };
 //     });
 //     console.log(pluralAnimals);
+
+
+
+//------------------------------- A J A X   P R O M I S E -------------------------------
+
+// function getPokemon(number) {
+// 	return $.ajax({
+// 		url: `https://pokeapi.co/api/v2/pokemon/${number}/`,
+// 		dataType: 'json',
+// 		method: 'GET'
+// 	})
+// }
+
+// const pokeBag = [];
+
+// for (let i = 1; i <= 40; i++) {
+// 	pokeBag.push(getPokemon(i));
+// }
+
+// // array of promises (array puts it in order)
+// // console.log(pokeBag);
+
+// $.when(...pokeBag)
+// 	.then((...caughtPokers) => {
+
+// 		const justTheGoodStuff = caughtPokers.map((miniArray) => {
+// 			return miniArray[0];
+// 		});
+
+// 		justTheGoodStuff.forEach((pokemon) => {
+// 			console.log(`${pokemon.name} is the Pokemon number ${pokemon.id}`);
+// 		})
+// 	});
+
+//       });
