@@ -348,7 +348,7 @@ textarea {
 .btn {
   display: inline-block;
   border: none;
-  background: #fff;
+  background: #F9F9EA;
   color: #000;
   padding: 1rem 4rem;
   text-decoration: none;
@@ -358,7 +358,7 @@ textarea {
 }
 
 .btn:hover {
-  background: #000;
+  background: #6A7A6C;
 }
 
 .btn:focus {
@@ -375,10 +375,18 @@ header h1 {
   text-align: center;
 }
 
-header input[type=text] {
+header form {
+  text-align: center;
+}
+
+header input[type='text'] {
   width: 60%;
-  padding: 12px 20px;
   margin-bottom: 3rem;
+  padding: 16.5px 20px 9px 20px;
+}
+
+header button[type='submit'] {
+  margin-left: -0.5rem;
 }
 
 main {
@@ -409,6 +417,7 @@ main {
 .plantsInfoBox h2 {
   font-size: 3rem;
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 .plantsInfoBox ul {

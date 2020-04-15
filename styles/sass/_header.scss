@@ -1,8 +1,6 @@
 // testing sass works
 header {
-	background: green;
-
-
+	background-color: $darkColor;
 
 	h1 {
 		font-size: 6rem;
@@ -10,12 +8,18 @@ header {
 		text-align: center;
 	}
 
-	input[type=text] { 
-    width: 60%;
-	padding: 12px 20px;
-	margin-bottom: 3rem;
+	form {
+		text-align: center;
+	}
+
+	input[type='text'] {
+		width: 60%;
+		margin-bottom: 3rem;
+		padding: 16.5px 20px 9px 20px;
+	}
+
+	button[type='submit'] {
+		margin-left: -0.5rem;
+		
 	}
 }
-
-
-
