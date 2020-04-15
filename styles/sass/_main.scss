@@ -1,0 +1,26 @@
+main {
+	background: darkgreen;
+}
+
+.plantWrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding-top: 3rem;
+}
+
+.plantsInfoBox {
+	flex: 1;
+	margin-right: 3rem;
+	margin-bottom: 3rem;
+	max-width: 300px;
+
+	h2 {
+		font-size: 3rem;
+		text-align: center;
+	}
+
+	ul {
+		font-size: 1.5rem;
+	}
+}

@@ -1,4 +1,21 @@
 // testing sass works
-body {
+header {
 	background: green;
+
+
+
+	h1 {
+		font-size: 6rem;
+		padding: 2rem;
+		text-align: center;
+	}
+
+	input[type=text] { 
+    width: 60%;
+	padding: 12px 20px;
+	margin-bottom: 3rem;
+	}
 }
+
+
+

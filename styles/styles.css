@@ -365,6 +365,52 @@ textarea {
   border: 1px solid;
 }
 
-body {
+header {
   background: green;
+}
+
+header h1 {
+  font-size: 6rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+header input[type=text] {
+  width: 60%;
+  padding: 12px 20px;
+  margin-bottom: 3rem;
+}
+
+main {
+  background: darkgreen;
+}
+
+.plantWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 3rem;
+}
+
+.plantsInfoBox {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-right: 3rem;
+  margin-bottom: 3rem;
+  max-width: 300px;
+}
+
+.plantsInfoBox h2 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.plantsInfoBox ul {
+  font-size: 1.5rem;
 }
