@@ -1,8 +1,9 @@
 // testing sass works
 header {
-	background-color: $darkColor;
+	background-color: $dark-color;
 
 	h1 {
+		color:$accent-color-one;
 		font-size: 6rem;
 		padding: 2rem;
 		text-align: center;
@@ -20,6 +21,5 @@ header {
 
 	button[type='submit'] {
 		margin-left: -0.5rem;
-		
 	}
 }

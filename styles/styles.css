@@ -348,8 +348,8 @@ textarea {
 .btn {
   display: inline-block;
   border: none;
-  background: #F9F9EA;
-  color: #000;
+  background: #DBA58E;
+  color: #425163;
   padding: 1rem 4rem;
   text-decoration: none;
   font-size: 2rem;
@@ -358,7 +358,7 @@ textarea {
 }
 
 .btn:hover {
-  background: #6A7A6C;
+  background: #9ED1C3;
 }
 
 .btn:focus {
@@ -366,10 +366,11 @@ textarea {
 }
 
 header {
-  background: green;
+  background-color: #425163;
 }
 
 header h1 {
+  color: #DBA58E;
   font-size: 6rem;
   padding: 2rem;
   text-align: center;
@@ -390,7 +391,7 @@ header button[type='submit'] {
 }
 
 main {
-  background: darkgreen;
+  background-color: #6A7A6C;
 }
 
 .plantWrapper {
@@ -421,5 +422,13 @@ main {
 }
 
 .plantsInfoBox ul {
+  font-size: 1.5rem;
+}
+
+footer {
+  background: #425163;
+  padding: 2rem;
+  color: #fff;
+  text-align: center;
   font-size: 1.5rem;
 }
