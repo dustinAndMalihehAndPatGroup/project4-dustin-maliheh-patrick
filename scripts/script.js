@@ -14,7 +14,7 @@ plantApp.retrieveData = () => {
 			params: {
 				token: plantApp.apiToken,
 				format: `json`,
-				q: `apple`,
+				q: plantApp.userSearch,
 			},
 		},
 	}).then((request) => {
@@ -83,8 +83,20 @@ plantApp.anotherFuckingThing = () => {
 	});
 };
 
+plantApp.search = () => {
+	$('#searchSomething').on('click', function (e) {
+		e.preventDefault();
+		plantApp.userSearch = $('#searchPlants').val();
+		console.log(plantApp.userSearch);
+		plantApp.retrieveData();
+		$('.plantWrapper').empty();
+	})
+};
+
 plantApp.init = () => {
 	plantApp.retrieveData();
+	plantApp.search();
+	
 };
 
 $(function () {
