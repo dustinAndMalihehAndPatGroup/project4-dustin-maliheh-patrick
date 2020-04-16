@@ -23,16 +23,31 @@ plantApp.retrieveData = () => {
 	});
 };
 
-plantApp.firstCall = (data) => {
-	plantApp.linkData = data;
-
-	plantApp.idArray = plantApp.linkData.map((data) => {
-		// console.log(data.scientific_name, data.link, data.id);
+plantApp.firstCall = (getLink) => {
+	plantApp.idArray = getLink.map((data) => {
 		return data.link;
 	});
 
-	plantApp.newThing();
+	plantApp.secondCall();
 	console.log(plantApp.storedPromises);
+};
+
+// Define the secondCall function which will map over the plantApp.idArray that we got back from our first API call and store the promises
+plantApp.secondCall = () => {
+	plantApp.storedPromises = plantApp.idArray.map((submitUrl) => {
+		return $.ajax({
+			url: `http://proxy.hackeryou.com`,
+			method: `GET`,
+			dataType: `json`,
+			data: {
+				reqUrl: submitUrl,
+				params: {
+					token: plantApp.apiToken,
+					format: `json`,
+				},
+			},
+		});
+	});
 };
 
 plantApp.init = () => {
@@ -42,20 +57,3 @@ plantApp.init = () => {
 $(function () {
 	plantApp.init();
 });
-
-plantApp.newThing = () => {
-	plantApp.storedPromises = plantApp.idArray.map((enterurl) => {
-		return $.ajax({
-			url: `http://proxy.hackeryou.com`,
-			method: `GET`,
-			dataType: `json`,
-			data: {
-				reqUrl: enterurl,
-				params: {
-					token: plantApp.apiToken,
-					format: `json`,
-				},
-			},
-		});
-	});
-};
