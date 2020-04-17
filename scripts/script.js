@@ -33,7 +33,7 @@ plantApp.firstCall = (getLink) => {
 		plantApp.secondCall();
 	} else {
 		$('.plantWrapper').append(
-			`<h2>Sorry we couldn't find ${plantApp.userSearch}</h2>`
+			`<h2 class ="cantFind">Sorry we couldn't find ${plantApp.userSearch}</h2>`
 		);
 	}
 };
@@ -76,15 +76,6 @@ plantApp.displayContentToPage = () => {
 				</div>
 			`;
 			$('.plantWrapper').append(htmlBox);
-			// This is where we make a html variable and then append it to the wrapper
-			console.log(
-				`
-				The common name is ${plantObject.common_name} 
-				The scientific name is ${plantObject.scientific_name} 
-				The native status is ${plantObject.native_status}
-				Find more info at ${plantObject.main_species.sources[0].source_url}
-				`
-			);
 		});
 	});
 };
