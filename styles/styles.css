@@ -425,6 +425,13 @@ main {
   font-size: 1.5rem;
 }
 
+.cantFind {
+  font-size: 6rem;
+  color: #9ED1C3;
+  padding: 1rem;
+  margin-bottom: 3rem;
+}
+
 footer {
   background: #425163;
   padding: 2rem;
