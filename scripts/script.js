@@ -28,7 +28,7 @@ plantApp.firstCall = (getLink) => {
 		return data.link;
 	});
 
-	// Checks if the 1st api call returns any results 
+	// Checks if the 1st api call returns any results
 	if (plantApp.idArray.length > 0) {
 		plantApp.secondCall();
 	} else {
@@ -36,8 +36,6 @@ plantApp.firstCall = (getLink) => {
 			`<h2>Sorry we couldn't find ${plantApp.userSearch}</h2>`
 		);
 	}
-
-	
 };
 
 // Define the secondCall function which will map over the plantApp.idArray that we got back from our first API call and store the promises
@@ -56,10 +54,10 @@ plantApp.secondCall = () => {
 			},
 		});
 	});
-	plantApp.anotherFuckingThing();
+	plantApp.displayContentToPage();
 };
 
-plantApp.anotherFuckingThing = () => {
+plantApp.displayContentToPage = () => {
 	$.when(...plantApp.storedPromises).then((...getValues) => {
 		const justTheGoodStuff = getValues.map((miniArray) => {
 			return miniArray[0];
