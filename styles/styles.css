@@ -348,8 +348,8 @@ textarea {
 .btn {
   display: inline-block;
   border: none;
-  background: #DBA58E;
-  color: #425163;
+  background: #b0f295;
+  color: #000000;
   padding: 1rem 4rem;
   text-decoration: none;
   font-size: 2rem;
@@ -366,11 +366,11 @@ textarea {
 }
 
 header {
-  background-color: #425163;
+  background-color: #b0f295;
 }
 
 header h1 {
-  color: #DBA58E;
+  color: #000000;
   font-size: 6rem;
   padding: 2rem;
   text-align: center;
@@ -391,7 +391,7 @@ header button[type='submit'] {
 }
 
 main {
-  background-color: #6A7A6C;
+  background-color: #FFFFFF;
 }
 
 .plantWrapper {
@@ -412,6 +412,7 @@ main {
           flex: 1;
   margin-right: 3rem;
   margin-bottom: 3rem;
+  margin-top: 3rem;
   max-width: 300px;
 }
 
@@ -419,6 +420,13 @@ main {
   font-size: 3rem;
   text-align: center;
   margin-bottom: 1rem;
+}
+
+.plantsInfoBox h3 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  height: 50px;
 }
 
 .plantsInfoBox ul {
@@ -433,9 +441,9 @@ main {
 }
 
 footer {
-  background: #425163;
+  background: #000000;
   padding: 2rem;
-  color: #DBA58E;
+  color: #b0f295;
   text-align: center;
   font-size: 1.5rem;
 }
