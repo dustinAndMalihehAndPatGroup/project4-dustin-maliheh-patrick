@@ -15,8 +15,8 @@ plantApp.retrieveData = () => {
 				token: plantApp.apiToken,
 				format: `json`,
 				q: plantApp.userSearch,
-				complete_data:true,
-				page_size:6
+				complete_data: true,
+				page_size: 6,
 			},
 		},
 	}).then((request) => {
@@ -56,6 +56,7 @@ plantApp.secondCall = () => {
 			},
 		});
 	});
+	console.log(plantApp.storedPromises);
 	plantApp.displayContentToPage();
 };
 
@@ -92,6 +93,24 @@ plantApp.search = () => {
 		$('.plantWrapper').empty();
 	});
 };
+
+$(document).on({
+	ajaxStart: function () {
+		$('.screenForLoading').addClass('loading');
+	},
+	ajaxStop: function () {
+		$('.screenForLoading').removeClass('loading');
+	},
+});
+
+// plantApp.checkCharLength = () => {
+// 	const atLeastThree = /(.*[a-z]){3}/;
+// 	if (plantApp.userSearch === atLeastThree) {
+
+// 	} else {
+// 		console.log('enter 3 char');
+// 	}
+// };
 
 plantApp.init = () => {
 	plantApp.retrieveData();
