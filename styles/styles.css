@@ -405,6 +405,21 @@ main {
           justify-content: center;
   padding-top: 3rem;
 }
+.hidden{
+  display:none;
+}
+.animation
+{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translateX(-50%) translateY(-50%);
+  color:#DBA58E;
+  font-size:30px;
+  font-family:cursive;
+  background:#425163;
+  padding:2%;
+}
 
 .plantsInfoBox {
   -webkit-box-flex: 1;
@@ -435,7 +450,10 @@ main {
 footer {
   background: #425163;
   padding: 2rem;
+  width:100vw;
   color: #DBA58E;
   text-align: center;
   font-size: 1.5rem;
+  position: fixed;
+  bottom: 0;
 }

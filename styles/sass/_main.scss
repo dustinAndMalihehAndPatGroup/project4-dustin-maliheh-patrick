@@ -32,3 +32,18 @@ main {
 	padding: 1rem;
 	margin-bottom: 3rem;
 }
+.hidden{
+	display:none;
+  }
+  .animation
+  {
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translateX(-50%) translateY(-50%);
+	color:#DBA58E;
+	font-size:30px;
+	font-family:cursive;
+	background:#425163;
+	padding:2%;
+  }

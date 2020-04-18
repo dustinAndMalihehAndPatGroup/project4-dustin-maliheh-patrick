@@ -1,7 +1,10 @@
 footer {
     background: $dark-color;
     padding: 2rem;
+    width:100vw;
     color: $accent-color-one;
     text-align: center;
     font-size: 1.5rem;
+    position: fixed;
+  bottom: 0;
 }

@@ -80,9 +80,31 @@ plantApp.displayContentToPage = () => {
 	});
 };
 
+let search =
+  ' Search Your Plant';
+let splited = search.split("");
+function animate() {
+  if (splited.length > 0) {
+    'use strict';
+    document.getElementById("animation").innerHTML += splited.shift();
+  } else {
+    document.getElementById("animation").innerHTML = "";
+    splited =search.split("");
+  }
+  setTimeout(animate, 200);
+}
+animate();
+
+
+
+
+
+
 plantApp.search = () => {
 	$('#searchSomething').on('click', function (e) {
 		e.preventDefault();
+		$('.plantWrapper').removeClass("hidden");
+		$('.anim').addClass("hidden");
 		plantApp.userSearch = $('#searchPlants').val();
 		console.log(plantApp.userSearch);
 		plantApp.retrieveData();
