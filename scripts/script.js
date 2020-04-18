@@ -56,6 +56,7 @@ plantApp.secondCall = () => {
 			},
 		});
 	});
+	console.log(plantApp.storedPromises);
 	plantApp.displayContentToPage();
 };
 
