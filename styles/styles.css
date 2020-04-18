@@ -79,12 +79,12 @@ u,
 ul,
 var,
 video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
 
 article,
@@ -98,177 +98,177 @@ hgroup,
 menu,
 nav,
 section {
-  display: block;
+	display: block;
 }
 
 body {
-  line-height: 1;
+	line-height: 1;
 }
 
 ol,
 ul {
-  list-style: none;
+	list-style: none;
 }
 
 blockquote,
 q {
-  quotes: none;
+	quotes: none;
 }
 
 blockquote:after,
 blockquote:before,
 q:after,
 q:before {
-  content: '';
-  content: none;
+	content: '';
+	content: none;
 }
 
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 input[type='search']::-webkit-search-cancel-button,
 input[type='search']::-webkit-search-decoration,
 input[type='search']::-webkit-search-results-button,
 input[type='search']::-webkit-search-results-decoration {
-  -webkit-appearance: none;
-  -moz-appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
 }
 
 input[type='search'] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
 }
 
 textarea {
-  overflow: auto;
-  vertical-align: top;
-  resize: vertical;
+	overflow: auto;
+	vertical-align: top;
+	resize: vertical;
 }
 
 audio,
 canvas,
 video {
-  display: inline-block;
-  max-width: 100%;
+	display: inline-block;
+	max-width: 100%;
 }
 
 audio:not([controls]) {
-  display: none;
-  height: 0;
+	display: none;
+	height: 0;
 }
 
 [hidden] {
-  display: none;
+	display: none;
 }
 
 html {
-  font-size: 62.5%;
-  -webkit-text-size-adjust: 62.5%;
-  -ms-text-size-adjust: 62.5%;
+	font-size: 62.5%;
+	-webkit-text-size-adjust: 62.5%;
+	-ms-text-size-adjust: 62.5%;
 }
 
 a:focus {
-  outline: thin dotted;
+	outline: thin dotted;
 }
 
 a:active,
 a:hover {
-  outline: 0;
+	outline: 0;
 }
 
 img {
-  border: 0;
-  -ms-interpolation-mode: bicubic;
+	border: 0;
+	-ms-interpolation-mode: bicubic;
 }
 
 figure {
-  margin: 0;
+	margin: 0;
 }
 
 form {
-  margin: 0;
+	margin: 0;
 }
 
 fieldset {
-  border: 1px solid silver;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
+	border: 1px solid silver;
+	margin: 0 2px;
+	padding: 0.35em 0.625em 0.75em;
 }
 
 legend {
-  border: 0;
-  padding: 0;
-  white-space: normal;
+	border: 0;
+	padding: 0;
+	white-space: normal;
 }
 
 button,
 input,
 select,
 textarea {
-  font-size: 100%;
-  margin: 0;
-  vertical-align: baseline;
+	font-size: 100%;
+	margin: 0;
+	vertical-align: baseline;
 }
 
 button,
 input {
-  line-height: normal;
+	line-height: normal;
 }
 
 button,
 select {
-  text-transform: none;
+	text-transform: none;
 }
 
 button,
 html input[type='button'],
 input[type='reset'],
 input[type='submit'] {
-  -webkit-appearance: button;
-  cursor: pointer;
+	-webkit-appearance: button;
+	cursor: pointer;
 }
 
 button[disabled],
 html input[disabled] {
-  cursor: default;
+	cursor: default;
 }
 
 input[type='checkbox'],
 input[type='radio'] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
 }
 
 input[type='search'] {
-  -webkit-appearance: textfield;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
 }
 
 input[type='search']::-webkit-search-cancel-button,
 input[type='search']::-webkit-search-decoration {
-  -webkit-appearance: none;
+	-webkit-appearance: none;
 }
 
 button::-moz-focus-inner,
 input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
+	border: 0;
+	padding: 0;
 }
 
 textarea {
-  overflow: auto;
-  vertical-align: top;
+	overflow: auto;
+	vertical-align: top;
 }
 
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 button,
@@ -276,188 +276,219 @@ html,
 input,
 select,
 textarea {
-  color: #222;
+	color: #222;
 }
 
 ::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
+	background: #b3d4fc;
+	text-shadow: none;
 }
 
 ::selection {
-  background: #b3d4fc;
-  text-shadow: none;
+	background: #b3d4fc;
+	text-shadow: none;
 }
 
 img {
-  vertical-align: middle;
+	vertical-align: middle;
 }
 
 fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
+	border: 0;
+	margin: 0;
+	padding: 0;
 }
 
 textarea {
-  resize: vertical;
+	resize: vertical;
 }
 
 .chromeframe {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+	margin: 0.2em 0;
+	background: #ccc;
+	color: #000;
+	padding: 0.2em 0;
 }
 
 .clearfix:after {
-  visibility: hidden;
-  display: block;
-  font-size: 0;
-  content: '';
-  clear: both;
-  height: 0;
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: '';
+	clear: both;
+	height: 0;
 }
 
 * {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .visuallyHidden:not(:focus):not(:active) {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
-  clip: rect(0 0 0);
-  overflow: hidden;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	-webkit-clip-path: inset(100%);
+	clip-path: inset(100%);
+	clip: rect(0 0 0);
+	overflow: hidden;
 }
 
 /* Utilites */
 .wrapper {
-  max-width: 1280px;
-  margin: 0 auto;
-  width: 90%;
+	max-width: 1280px;
+	margin: 0 auto;
+	width: 90%;
 }
 
 .btn {
-  display: inline-block;
-  border: none;
-  background: #DBA58E;
-  color: #425163;
-  padding: 1rem 4rem;
-  text-decoration: none;
-  font-size: 2rem;
-  letter-spacing: 0.7px;
-  text-transform: uppercase;
+	display: inline-block;
+	border: none;
+	background: #b6c4c2;
+	color: #ffffff;
+	padding: 1rem 4rem;
+	text-decoration: none;
+	font-size: 2rem;
+	letter-spacing: 0.7px;
+	text-transform: uppercase;
+	border: 3px solid #000000;
+	border-radius: 1rem;
 }
 
 .btn:hover {
-  background: #9ED1C3;
+	border: 3px solid #ffffff;
 }
 
 .btn:focus {
-  border: 1px solid;
+	border: 3px solid;
 }
 
 header {
-  background-color: #425163;
+	background-color: #b0f295;
 }
 
 header h1 {
-  color: #DBA58E;
-  font-size: 6rem;
-  padding: 2rem;
-  text-align: center;
+	color: #000000;
+	font-size: 6rem;
+	padding: 2rem;
+	text-align: center;
+	font-family: 'Josefin Sans', sans-serif;
 }
 
 header form {
-  text-align: center;
+	text-align: center;
 }
 
 header input[type='text'] {
-  width: 60%;
-  margin-bottom: 3rem;
-  padding: 16.5px 20px 9px 20px;
+	width: 60%;
+	margin-bottom: 3rem;
+	padding: 16.5px 20px 9px 20px;
 }
 
 header button[type='submit'] {
-  margin-left: -0.5rem;
+	margin-left: -0.5rem;
+	font-family: 'Vollkorn', serif;
+	font-style: italic;
 }
 
 main {
-  background-color: #6A7A6C;
+	background-color: #ffffff;
 }
 
 .plantWrapper {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding-top: 3rem;
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	padding-top: 3rem;
 }
 
 .plantsInfoBox {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  margin-right: 3rem;
-  margin-bottom: 3rem;
-  max-width: 300px;
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	margin-right: 6.5rem;
+	margin-bottom: 3rem;
+	margin-top: 3rem;
+	max-width: 300px;
+	border: 3px solid #000000;
+	border-radius: 1rem;
+	-webkit-box-shadow: 8px 8px #000000;
+	box-shadow: 8px 8px #000000;
 }
 
 .plantsInfoBox h2 {
-  font-size: 3rem;
-  text-align: center;
-  margin-bottom: 1rem;
+	font-size: 3rem;
+	text-align: center;
+	margin-bottom: 1rem;
+	margin-top: 2.5rem;
+	font-family: 'Vollkorn', serif;
+}
+
+.plantsInfoBox h3 {
+	font-size: 2rem;
+	text-align: center;
+	margin-bottom: 1rem;
+	height: 50px;
+	font-family: 'Vollkorn', serif;
+	font-style: italic;
+	border-bottom: 3px solid #000000;
 }
 
 .plantsInfoBox ul {
-  font-size: 1.5rem;
+	font-size: 1.5rem;
 }
 
 .plantsInfoBox img {
-  width: 300px;
-  height: 300px;
+	width: 300px;
+	height: 300px;
 }
 
 .cantFind {
-  font-size: 6rem;
-  color: #9ED1C3;
-  padding: 1rem;
-  margin-bottom: 3rem;
+	font-size: 6rem;
+	color: #b0f295;
+	padding: 1rem;
+	margin-bottom: 3rem;
 }
 
 .modal {
-  display: none;
-  position: fixed;
-  z-index: 2;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.9) url("../../imgs/loader.gif") 50% 50% no-repeat;
+	display: none;
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: rgba(255, 255, 255, 0.9) url('../../imgs/loader.gif') 50% 50%
+		no-repeat;
 }
 
 .loading .modal {
-  overflow: hidden;
-  display: block;
+	overflow: hidden;
+	display: block;
+}
+
+.plantsInfoBox:hover {
+	-webkit-box-shadow: 11px 11px #b0f295;
+	box-shadow: 11px 11px #b0f295;
+	-webkit-transition: all ease-in-out 0.2s;
+	transition: all ease-in-out 0.2s;
 }
 
 footer {
-  background: #425163;
-  padding: 2rem;
-  color: #DBA58E;
-  text-align: center;
-  font-size: 1.5rem;
+	background: #000000;
+	font-family: 'Josefin Sans', sans-serif;
+	padding: 2rem;
+	color: #b0f295;
+	text-align: center;
+	font-size: 1.5rem;
 }

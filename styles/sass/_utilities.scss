@@ -8,18 +8,20 @@
 .btn {
 	display: inline-block;
 	border: none;
-	background: $accent-color-one;
-	color: $dark-color;
+	background: $light-color;
+	color: $main-color;
 	padding: 1rem 4rem;
 	text-decoration: none;
 	font-size: 2rem;
 	letter-spacing: 0.7px;
 	text-transform: uppercase;
+	border: 3px solid $dark-color;
+	border-radius: 1rem;
 
 	&:hover {
-		background: $accent-color-two;
+		border: 3px solid $main-color;
 	}
 	&:focus {
-		border: 1px solid;
+		border: 3px solid;
 	}
 }
