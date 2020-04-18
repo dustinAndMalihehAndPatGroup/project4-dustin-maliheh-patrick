@@ -103,18 +103,18 @@ $(document).on({
 	},
 });
 
-plantApp.checkCharLength = () => {
-	const atLeastThree = /(.*[a-z]){3}/;
-	if (plantApp.userSearch === atLeastThree) {
-		plantApp.search();
-	} else {
-		console.log('enter 3 char');
-	}
-};
+// plantApp.checkCharLength = () => {
+// 	const atLeastThree = /(.*[a-z]){3}/;
+// 	if (plantApp.userSearch === atLeastThree) {
+
+// 	} else {
+// 		console.log('enter 3 char');
+// 	}
+// };
 
 plantApp.init = () => {
 	plantApp.retrieveData();
-	plantApp.checkCharLength();
+	plantApp.search();
 };
 
 $(function () {
