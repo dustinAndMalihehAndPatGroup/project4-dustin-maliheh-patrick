@@ -348,21 +348,23 @@ textarea {
 .btn {
   display: inline-block;
   border: none;
-  background: #b0f295;
-  color: #000000;
+  background: #b6c4c2;
+  color: #FFFFFF;
   padding: 1rem 4rem;
   text-decoration: none;
   font-size: 2rem;
   letter-spacing: 0.7px;
   text-transform: uppercase;
+  border: 3px solid #000000;
+  border-radius: 1rem;
 }
 
 .btn:hover {
-  background: #9ED1C3;
+  border: 3px solid #FFFFFF;
 }
 
 .btn:focus {
-  border: 1px solid;
+  border: 3px solid;
 }
 
 header {
@@ -374,6 +376,7 @@ header h1 {
   font-size: 6rem;
   padding: 2rem;
   text-align: center;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 header form {
@@ -388,6 +391,8 @@ header input[type='text'] {
 
 header button[type='submit'] {
   margin-left: -0.5rem;
+  font-family: "Vollkorn", serif;
+  font-style: italic;
 }
 
 main {
@@ -410,16 +415,22 @@ main {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  margin-right: 3rem;
+  margin-right: 6.5rem;
   margin-bottom: 3rem;
   margin-top: 3rem;
   max-width: 300px;
+  border: 3px solid #000000;
+  border-radius: 1rem;
+  -webkit-box-shadow: 8px 8px #000000;
+          box-shadow: 8px 8px #000000;
 }
 
 .plantsInfoBox h2 {
   font-size: 3rem;
   text-align: center;
   margin-bottom: 1rem;
+  margin-top: 2.5rem;
+  font-family: "Vollkorn", serif;
 }
 
 .plantsInfoBox h3 {
@@ -427,6 +438,9 @@ main {
   text-align: center;
   margin-bottom: 1rem;
   height: 50px;
+  font-family: "Vollkorn", serif;
+  font-style: italic;
+  border-bottom: 3px solid #000000;
 }
 
 .plantsInfoBox ul {
@@ -435,13 +449,21 @@ main {
 
 .cantFind {
   font-size: 6rem;
-  color: #9ED1C3;
+  color: #b0f295;
   padding: 1rem;
   margin-bottom: 3rem;
 }
 
+.plantsInfoBox:hover {
+  -webkit-box-shadow: 11px 11px #b0f295;
+          box-shadow: 11px 11px #b0f295;
+  -webkit-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
+}
+
 footer {
   background: #000000;
+  font-family: "Josefin Sans", sans-serif;
   padding: 2rem;
   color: #b0f295;
   text-align: center;
