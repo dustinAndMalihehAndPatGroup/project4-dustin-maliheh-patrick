@@ -15,6 +15,7 @@ plantApp.retrieveData = () => {
 				token: plantApp.apiToken,
 				format: `json`,
 				q: plantApp.userSearch,
+				complete_data:true,
 			},
 		},
 	}).then((request) => {
@@ -65,11 +66,12 @@ plantApp.displayContentToPage = () => {
 		justTheGoodStuff.forEach((plantObject) => {
 			const htmlBox = `
 			<div class="plantsInfoBox">
-                    <h2>${plantObject.common_name}</h2>
+				<div class=topText>
+					<h2>${plantObject.common_name}</h2>
+					<h3>${plantObject.scientific_name}</h3>
+				</div>	
                     <img src="https://picsum.photos/300/300" alt="cool alt tag">
                     <ul>
-                        <li>common name: <span>${plantObject.common_name}</span> </li>
-                        <li>scientific name: <span>${plantObject.scientific_name}</span></li>
                         <li>more Info: <span>${plantObject.main_species.sources[0].source_url}</span></li>
                         <li>native statues: <span>${plantObject.native_status}</span></li>
                     </ul>
