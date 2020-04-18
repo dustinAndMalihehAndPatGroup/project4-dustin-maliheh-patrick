@@ -102,9 +102,18 @@ $(document).on({
 	},
 });
 
+plantApp.checkCharLength = () => {
+	const atLeastThree = /(.*[a-z]){3}/;
+	if (plantApp.userSearch === atLeastThree) {
+		plantApp.search();
+	} else {
+		console.log('enter 3 char');
+	}
+};
+
 plantApp.init = () => {
 	plantApp.retrieveData();
-	plantApp.search();
+	plantApp.checkCharLength();
 };
 
 $(function () {
