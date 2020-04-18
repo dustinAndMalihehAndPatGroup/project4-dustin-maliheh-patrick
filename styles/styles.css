@@ -395,6 +395,7 @@ main {
 }
 
 .plantWrapper {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -425,11 +426,32 @@ main {
   font-size: 1.5rem;
 }
 
+.plantsInfoBox img {
+  width: 300px;
+  height: 300px;
+}
+
 .cantFind {
   font-size: 6rem;
   color: #9ED1C3;
   padding: 1rem;
   margin-bottom: 3rem;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9) url("../../imgs/loader.gif") 50% 50% no-repeat;
+}
+
+.loading .modal {
+  overflow: hidden;
+  display: block;
 }
 
 footer {

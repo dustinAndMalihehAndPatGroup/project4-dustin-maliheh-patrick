@@ -15,6 +15,8 @@ plantApp.retrieveData = () => {
 				token: plantApp.apiToken,
 				format: `json`,
 				q: plantApp.userSearch,
+				complete_data: true,
+				page_size: 6,
 			},
 		},
 	}).then((request) => {
@@ -89,6 +91,15 @@ plantApp.search = () => {
 		$('.plantWrapper').empty();
 	});
 };
+
+$(document).on({
+	ajaxStart: function () {
+		$('.screenForLoading').addClass('loading');
+	},
+	ajaxStop: function () {
+		$('.screenForLoading').removeClass('loading');
+	},
+});
 
 plantApp.init = () => {
 	plantApp.retrieveData();
