@@ -4,9 +4,6 @@ main {
 
 .plantWrapper {
 	position: relative;
-	// display: flex;
-	// flex-wrap: wrap;
-	// justify-content: center;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
     grid-gap: 15px;
@@ -16,10 +13,8 @@ main {
 
 .plantsInfoBox {
 	flex: 1;
-	// margin-right: 6.5rem;
 	margin-bottom: 3rem;
 	margin-top: 3rem;
-	// max-width: 300px;
 	border: 3px solid $dark-color;
 	border-radius: 1rem;
 	box-shadow: 8px 8px $dark-color;
@@ -56,9 +51,6 @@ main {
 	}
 }
 
-// .plantsInfoBox:nth-child(3n){
-// 	margin-right:0rem;
-// }
 
 .cantFind {
 	font-size: 6rem;
