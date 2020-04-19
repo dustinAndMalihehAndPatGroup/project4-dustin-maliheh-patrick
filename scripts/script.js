@@ -25,12 +25,13 @@ plantApp.retrieveData = () => {
 	});
 };
 
+// Stores all endpoints needed based on user query 
 plantApp.firstCall = (getLink) => {
 	plantApp.idArray = getLink.map((data) => {
 		return data.link;
 	});
 
-	// Checks if the 1st api call returns any results
+	// Checks if the 1st api call returned any results
 	plantApp.idArray.length > 0
 		? plantApp.secondCall()
 		: $('.plantWrapper').append(
@@ -59,6 +60,7 @@ plantApp.secondCall = () => {
 	plantApp.displayContentToPage();
 };
 
+// Takes the promises from the 2nd api call spreads them and then loops over each one to display the info to the user
 plantApp.displayContentToPage = () => {
 	$.when(...plantApp.storedPromises)
 		.then((...getValues) => {
