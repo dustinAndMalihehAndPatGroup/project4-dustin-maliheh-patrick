@@ -15,8 +15,8 @@ plantApp.retrieveData = () => {
 				token: plantApp.apiToken,
 				format: `json`,
 				q: plantApp.userSearch,
-				complete_data: true,
-				page_size: 6,
+				// complete_data: true,
+				page_size: 10
 			},
 		},
 	}).then((request) => {
@@ -72,7 +72,7 @@ plantApp.displayContentToPage = () => {
 				// checks if there are any images in the array
 				plantImage.length > 0
 					? (plantImage = plantObject.images[0].url)
-					: (plantImage = '../imgs/missingImage.jpg');
+					: (plantImage = '.../../imgs/missingImage.jpg');
 
 				const htmlBox = `
 			<div class="plantsInfoBox">
