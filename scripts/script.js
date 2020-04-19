@@ -31,13 +31,11 @@ plantApp.firstCall = (getLink) => {
 	});
 
 	// Checks if the 1st api call returns any results
-	if (plantApp.idArray.length > 0) {
-		plantApp.secondCall();
-	} else {
-		$('.plantWrapper').append(
-			`<h2 class ="cantFind">Sorry we couldn't find ${plantApp.userSearch}</h2>`
-		);
-	}
+	plantApp.idArray.length > 0
+		? plantApp.secondCall()
+		: $('.plantWrapper').append(
+				`<h2 class ="cantFind">Sorry we couldn't find ${plantApp.userSearch}</h2>`
+		  );
 };
 
 // Define the secondCall function which will map over the plantApp.idArray that we got back from our first API call and store the promises
@@ -68,13 +66,10 @@ plantApp.displayContentToPage = () => {
 			});
 			justTheGoodStuff.forEach((plantObject) => {
 				let plantImage = plantObject.images;
-				if (plantImage.length > 0) {
-					plantImage = plantObject.images[0].url;
-				} else {
-					plantImage = '../imgs/missingImage.jpg';
-				}
-
-				console.log(plantImage);
+				// checks if there are any images in the array
+				plantImage.length > 0
+					? (plantImage = plantObject.images[0].url)
+					: (plantImage = '../imgs/missingImage.jpg');
 
 				const htmlBox = `
 			<div class="plantsInfoBox">
@@ -97,6 +92,7 @@ plantApp.displayContentToPage = () => {
 		});
 };
 
+// allows user to submit search query and fetches info from api
 plantApp.search = () => {
 	$('#searchSomething').on('click', function (e) {
 		e.preventDefault();
@@ -107,18 +103,22 @@ plantApp.search = () => {
 	});
 };
 
-$(document).on({
-	ajaxStart: function () {
-		$('.screenForLoading').addClass('loading');
-	},
-	ajaxStop: function () {
-		$('.screenForLoading').removeClass('loading');
-	},
-});
+// runs loading screen gif while ajax call is being made
+plantApp.displayLoadingScreen = () => {
+	$(document).on({
+		ajaxStart: function () {
+			$('.screenForLoading').addClass('loading');
+		},
+		ajaxStop: function () {
+			$('.screenForLoading').removeClass('loading');
+		},
+	});
+};
 
 plantApp.init = () => {
 	plantApp.retrieveData();
 	plantApp.search();
+	plantApp.displayLoadingScreen();
 };
 
 $(function () {
