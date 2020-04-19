@@ -80,7 +80,7 @@ plantApp.displayContentToPage = () => {
 					<h2>${plantObject.common_name}</h2>
 					<h3>- ${plantObject.scientific_name} -</h3>
 				</div>	
-                    <img src="${plantImage}" alt="${plantObject.common_name}">
+                    <a href="${plantObject.main_species.sources[0].source_url}"><img src="${plantImage}" alt="${plantObject.common_name}"></a>
 					<ul>
                         <li>More Info: <span><a href="${plantObject.main_species.sources[0].source_url}">${plantObject.main_species.sources[0].source_url}</a></span></li>
                         <li>Native Statues: <span>${plantObject.native_status}</span></li>
