@@ -1,8 +1,11 @@
 footer {
     background: $dark-color;
     font-family: $font-three;
+    width:100vw;
     padding: 2rem;
     color: $accent-color;
     text-align: center;
     font-size: 1.5rem;
+    position: fixed;
+    bottom: 0;
 }

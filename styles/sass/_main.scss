@@ -9,10 +9,25 @@ main {
     grid-gap: 15px;
     grid-auto-rows: minmax(100px, auto);
 	padding-top: 3rem;
+	margin-bottom: 6rem;
+}
+.animeText {
+	color: $dark-color;
+	font-size: 6rem;
+	padding: 2rem;
+	text-align: center;
+	font-family: $font-three;
+	margin: 100px auto;
 }
 
+.animeText.letter {
+	display: inline-block;
+}
+.hidden {
+	display: none;
+}
 .plantsInfoBox {
-	flex: 1;
+	// flex: 1;
 	margin-bottom: 3rem;
 	margin-top: 3rem;
 	border: 3px solid $dark-color;
