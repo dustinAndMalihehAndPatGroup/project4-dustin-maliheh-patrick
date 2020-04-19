@@ -61,27 +61,33 @@ plantApp.secondCall = () => {
 };
 
 plantApp.displayContentToPage = () => {
-	$.when(...plantApp.storedPromises).then((...getValues) => {
-		const justTheGoodStuff = getValues.map((miniArray) => {
-			return miniArray[0];
-		});
-		justTheGoodStuff.forEach((plantObject) => {
-			const htmlBox = `
+	$.when(...plantApp.storedPromises)
+		.then((...getValues) => {
+			const justTheGoodStuff = getValues.map((miniArray) => {
+				return miniArray[0];
+			});
+			justTheGoodStuff.forEach((plantObject) => {
+				let plantImage = plantObject.images[0].url;
+
+				const htmlBox = `
 			<div class="plantsInfoBox">
 				<div class=topText>
 					<h2>${plantObject.common_name}</h2>
 					<h3>- ${plantObject.scientific_name} -</h3>
 				</div>	
-                    <img src="https://picsum.photos/300/300" alt="cool alt tag">
+                    <img src="${plantImage}" alt="cool alt tag">
 					<ul>
                         <li>More Info: <span><a href="${plantObject.main_species.sources[0].source_url}">${plantObject.main_species.sources[0].source_url}</a></span></li>
                         <li>Native Statues: <span>${plantObject.native_status}</span></li>
                     </ul>
 				</div>
 			`;
-			$('.plantWrapper').append(htmlBox);
+				$('.plantWrapper').append(htmlBox);
+			});
+		})
+		.catch((err) => {
+			console.log(err);
 		});
-	});
 };
 
 plantApp.search = () => {
@@ -102,15 +108,6 @@ $(document).on({
 		$('.screenForLoading').removeClass('loading');
 	},
 });
-
-// plantApp.checkCharLength = () => {
-// 	const atLeastThree = /(.*[a-z]){3}/;
-// 	if (plantApp.userSearch === atLeastThree) {
-
-// 	} else {
-// 		console.log('enter 3 char');
-// 	}
-// };
 
 plantApp.init = () => {
 	plantApp.retrieveData();
