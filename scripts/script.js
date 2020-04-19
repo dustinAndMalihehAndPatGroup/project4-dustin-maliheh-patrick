@@ -34,7 +34,8 @@ plantApp.firstCall = (getLink) => {
 	plantApp.idArray.length > 0
 		? plantApp.secondCall()
 		: $('.plantWrapper').append(
-				`<h2 class ="cantFind">Sorry we couldn't find ${plantApp.userSearch}</h2>`
+				`<h2 class ="cantFind">Sorry we couldn't find ${plantApp.userSearch}
+				</h2>`
 		  );
 };
 
@@ -89,6 +90,9 @@ plantApp.displayContentToPage = () => {
 		})
 		.catch((err) => {
 			console.log(err);
+			$('.plantWrapper').append(
+				`<h2 class ="cantFind">Something Went Wrong, Try Again</h2>`
+			);
 		});
 };
 
