@@ -25,7 +25,7 @@ plantApp.retrieveData = () => {
 	});
 };
 
-// Stores all endpoints needed based on user query 
+// Stores all endpoints needed based on user query
 plantApp.firstCall = (getLink) => {
 	plantApp.idArray = getLink.map((data) => {
 		return data.link;
@@ -99,24 +99,31 @@ plantApp.displayContentToPage = () => {
 };
 plantApp.animation = () => {
 	const textWrapper = document.querySelector('p');
-	textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-	
-	anime.timeline({loop: true})
-	  .add({
-		targets: '.animeText .letter',
-		scale: [4,1],
-		opacity: [0,1],
-		translateZ: 0,
-		easing: "easeOutExpo",
-		duration: 950,
-		delay: function(el, i) { return i * 70 }
-	  }).add({
-		targets: '.animeText',
-		opacity: 0,
-		duration: 1000,
-		easing: "easeOutExpo",
-		delay: 1000
-	  });
+	textWrapper.innerHTML = textWrapper.textContent.replace(
+		/\S/g,
+		"<span class='letter'>$&</span>"
+	);
+
+	anime
+		.timeline({ loop: true })
+		.add({
+			targets: '.animeText .letter',
+			scale: [4, 1],
+			opacity: [0, 1],
+			translateZ: 0,
+			easing: 'easeOutExpo',
+			duration: 950,
+			delay: function (el, i) {
+				return i * 70;
+			},
+		})
+		.add({
+			targets: '.animeText',
+			opacity: 0,
+			duration: 1000,
+			easing: 'easeOutExpo',
+			delay: 1000,
+		});
 };
 
 // allows user to submit search query and fetches info from api
@@ -126,7 +133,7 @@ plantApp.search = () => {
 		plantApp.userSearch = $('#searchPlants').val();
 		console.log(plantApp.userSearch);
 		plantApp.retrieveData();
-		$(".animeText").addClass("hidden");
+		$('.animeText').addClass('hidden');
 		$('.plantWrapper').empty();
 	});
 };
@@ -144,7 +151,6 @@ plantApp.displayLoadingScreen = () => {
 };
 
 plantApp.init = () => {
-	plantApp.retrieveData();
 	plantApp.search();
 	plantApp.displayLoadingScreen();
 	plantApp.animation();
