@@ -67,7 +67,14 @@ plantApp.displayContentToPage = () => {
 				return miniArray[0];
 			});
 			justTheGoodStuff.forEach((plantObject) => {
-				let plantImage = plantObject.images[0].url;
+				let plantImage = plantObject.images;
+				if (plantImage.length > 0) {
+					plantImage = plantObject.images[0].url;
+				} else {
+					plantImage = 'https://picsum.photos/200/300';
+				}
+
+				console.log(plantImage);
 
 				const htmlBox = `
 			<div class="plantsInfoBox">
