@@ -27,7 +27,6 @@ main {
 	display: none;
 }
 .plantsInfoBox {
-	// flex: 1;
 	margin-bottom: 3rem;
 	margin-top: 3rem;
 	border: 3px solid $dark-color;
@@ -59,17 +58,18 @@ main {
 	}
 
 	img {
-		width: 300px;
+		width: 100%;
 		height: 300px;
 		object-fit: cover;
-		padding-right: 6px;
+		// padding-right: 6px;
 	}
 }
 
 
 .cantFind {
 	font-size: 6rem;
-	color: $accent-color;
+	font-family: $font-three;
+	color: $dark-color;
 	padding: 1rem;
 	margin-bottom: 3rem;
 }
