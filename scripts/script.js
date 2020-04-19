@@ -71,7 +71,7 @@ plantApp.displayContentToPage = () => {
 				if (plantImage.length > 0) {
 					plantImage = plantObject.images[0].url;
 				} else {
-					plantImage = 'https://picsum.photos/200/300';
+					plantImage = '../imgs/missingImage.jpg';
 				}
 
 				console.log(plantImage);
