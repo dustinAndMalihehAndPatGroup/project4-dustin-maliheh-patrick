@@ -4,21 +4,28 @@ main {
 
 .plantWrapper {
 	position: relative;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+	// display: flex;
+	// flex-wrap: wrap;
+	// justify-content: center;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    grid-auto-rows: minmax(100px, auto);
 	padding-top: 3rem;
 }
 
 .plantsInfoBox {
 	flex: 1;
-	margin-right: 6.5rem;
+	// margin-right: 6.5rem;
 	margin-bottom: 3rem;
 	margin-top: 3rem;
-	max-width: 300px;
+	// max-width: 300px;
 	border: 3px solid $dark-color;
 	border-radius: 1rem;
 	box-shadow: 8px 8px $dark-color;
+	width: 90%;
+	margin-right: 5%;
+	margin-left: 5%;
 
 	h2 {
 		font-size: 3rem;
@@ -31,12 +38,10 @@ main {
 	h3 {
 		font-size: 2rem;
 		text-align: center;
-		margin-bottom: 1rem;
 		height: 50px;
 		font-family: $font-one;
 		font-style: italic;
 		border-bottom: 3px solid $dark-color;
-		// transition: all ease-in-out 0.8s;
 	}
 
 	ul {
@@ -46,8 +51,14 @@ main {
 	img {
 		width: 300px;
 		height: 300px;
+		object-fit: cover;
+		padding-right: 6px;
 	}
 }
+
+// .plantsInfoBox:nth-child(3n){
+// 	margin-right:0rem;
+// }
 
 .cantFind {
 	font-size: 6rem;
@@ -66,7 +77,7 @@ main {
 	left: 0;
 	height: 100%;
 	width: 100%;
-	background: rgba(255, 255, 255, 0.9) url('../../imgs/loader.gif') 50% 50%
+	background: rgba(255, 255, 255, 0.9) url('../imgs/loader.gif') 50% 50%
 		no-repeat;
 }
 
@@ -78,3 +89,4 @@ main {
 	box-shadow: 11px 11px $accent-color;
 	transition: all ease-in-out 0.2s;
 }
+

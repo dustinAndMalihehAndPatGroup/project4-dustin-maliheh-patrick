@@ -15,8 +15,8 @@ plantApp.retrieveData = () => {
 				token: plantApp.apiToken,
 				format: `json`,
 				q: plantApp.userSearch,
-				complete_data: true,
-				page_size: 6,
+				// complete_data: true,
+				page_size: 10
 			},
 		},
 	}).then((request) => {
@@ -72,7 +72,9 @@ plantApp.displayContentToPage = () => {
 					<h2>${plantObject.common_name}</h2>
 					<h3>- ${plantObject.scientific_name} -</h3>
 				</div>	
-                    <img src="https://picsum.photos/300/300" alt="cool alt tag">
+				<div class="imgCon">
+					<img src="https://picsum.photos/200/300" alt="cool alt tag">
+				</div>	
 					<ul>
                         <li>More Info: <span><a href="${plantObject.main_species.sources[0].source_url}">${plantObject.main_species.sources[0].source_url}</a></span></li>
                         <li>Native Statues: <span>${plantObject.native_status}</span></li>
