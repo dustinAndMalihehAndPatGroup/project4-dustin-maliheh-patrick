@@ -424,10 +424,6 @@ main {
   display: inline-block;
 }
 
-.hidden {
-  display: none;
-}
-
 .plantsInfoBox {
   margin-bottom: 3rem;
   margin-top: 3rem;
@@ -446,6 +442,7 @@ main {
   margin-bottom: 1rem;
   margin-top: 2.5rem;
   font-family: "Vollkorn", serif;
+  text-transform: capitalize;
 }
 
 .plantsInfoBox h3 {
@@ -455,6 +452,7 @@ main {
   font-family: "Vollkorn", serif;
   font-style: italic;
   border-bottom: 3px solid #000000;
+  text-transform: capitalize;
 }
 
 .plantsInfoBox ul {
@@ -466,14 +464,6 @@ main {
   height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-.cantFind {
-  font-size: 6rem;
-  font-family: "Josefin Sans", sans-serif;
-  color: #000000;
-  padding: 1rem;
-  margin-bottom: 3rem;
 }
 
 .modal {

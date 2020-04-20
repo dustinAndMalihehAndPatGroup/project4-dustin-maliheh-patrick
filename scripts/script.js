@@ -16,11 +16,7 @@ plantApp.retrieveData = () => {
 				format: `json`,
 				q: plantApp.userSearch,
 				complete_data: true,
-<<<<<<< HEAD
-				page_size: 10
-=======
 				page_size: 10,
->>>>>>> master
 			},
 		},
 	}).then((request) => {
@@ -38,10 +34,9 @@ plantApp.firstCall = (getLink) => {
 	// Checks if the 1st api call returned any results
 	plantApp.idArray.length > 0
 		? plantApp.secondCall()
-		: $('.plantWrapper').append(
-				`<h2 class ="cantFind">Sorry we couldn't find ${plantApp.userSearch}
-				</h2>`
-		  );
+		: $('.animeText')
+				.text(`Sorry we couldn't find ${plantApp.userSearch}`)
+				.show();
 };
 
 // Define the secondCall function which will map over the plantApp.idArray that we got back from our first API call and store the promises
@@ -96,9 +91,7 @@ plantApp.displayContentToPage = () => {
 		})
 		.catch((err) => {
 			console.log(err);
-			$('.plantWrapper').append(
-				`<h2 class ="cantFind">Something Went Wrong, Try Again</h2>`
-			);
+			$('.animeText').text(`Something Went Wrong, Try Again`).show();
 		});
 };
 plantApp.animation = () => {
@@ -143,7 +136,7 @@ plantApp.search = () => {
 				distance: 5,
 			});
 		} else {
-			$('.animeText').addClass('hidden');
+			$('.animeText').hide();
 			$('.plantWrapper').empty();
 			plantApp.retrieveData();
 			$('#searchPlants').val('');

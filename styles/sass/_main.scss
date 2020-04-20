@@ -6,8 +6,8 @@ main {
 	position: relative;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-    grid-gap: 15px;
-    grid-auto-rows: minmax(100px, auto);
+	grid-gap: 15px;
+	grid-auto-rows: minmax(100px, auto);
 	padding-top: 3rem;
 	margin-bottom: 6rem;
 }
@@ -23,9 +23,7 @@ main {
 .animeText.letter {
 	display: inline-block;
 }
-.hidden {
-	display: none;
-}
+
 .plantsInfoBox {
 	margin-bottom: 3rem;
 	margin-top: 3rem;
@@ -42,6 +40,7 @@ main {
 		margin-bottom: 1rem;
 		margin-top: 2.5rem;
 		font-family: $font-one;
+		text-transform: capitalize;
 	}
 
 	h3 {
@@ -51,6 +50,7 @@ main {
 		font-family: $font-one;
 		font-style: italic;
 		border-bottom: 3px solid $dark-color;
+		text-transform: capitalize;
 	}
 
 	ul {
@@ -63,15 +63,6 @@ main {
 		object-fit: cover;
 		// padding-right: 6px;
 	}
-}
-
-
-.cantFind {
-	font-size: 6rem;
-	font-family: $font-three;
-	color: $dark-color;
-	padding: 1rem;
-	margin-bottom: 3rem;
 }
 
 // Loading animation
@@ -97,9 +88,9 @@ main {
 	transition: all ease-in-out 0.2s;
 }
 .plantsInfoBox {
-	ul{
-		li{
-			padding:1rem;
+	ul {
+		li {
+			padding: 1rem;
 			border-top: 3px solid $dark-color;
 			// background-color: #b6c4c2;
 		}
