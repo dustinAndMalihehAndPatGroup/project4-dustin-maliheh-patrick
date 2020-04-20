@@ -16,7 +16,11 @@ plantApp.retrieveData = () => {
 				format: `json`,
 				q: plantApp.userSearch,
 				complete_data: true,
+<<<<<<< HEAD
 				page_size: 10
+=======
+				page_size: 10,
+>>>>>>> master
 			},
 		},
 	}).then((request) => {
@@ -131,10 +135,19 @@ plantApp.search = () => {
 	$('#searchSomething').on('click', function (e) {
 		e.preventDefault();
 		plantApp.userSearch = $('#searchPlants').val();
-		console.log(plantApp.userSearch);
-		plantApp.retrieveData();
-		$('.animeText').addClass('hidden');
-		$('.plantWrapper').empty();
+
+		if (plantApp.userSearch.length < 1) {
+			$('#searchPlants').effect('shake', {
+				direction: 'up',
+				times: 3,
+				distance: 5,
+			});
+		} else {
+			$('.animeText').addClass('hidden');
+			$('.plantWrapper').empty();
+			plantApp.retrieveData();
+			$('#searchPlants').val('');
+		}
 	});
 };
 

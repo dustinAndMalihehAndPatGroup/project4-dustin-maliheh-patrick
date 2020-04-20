@@ -381,11 +381,11 @@ header h1 {
 
 header form {
   text-align: center;
+  padding: 3rem 0;
 }
 
 header input[type='text'] {
   width: 60%;
-  margin-bottom: 3rem;
   padding: 16.5px 20px 9px 20px;
 }
 
@@ -497,6 +497,11 @@ main {
           box-shadow: 11px 11px #b0f295;
   -webkit-transition: all ease-in-out 0.2s;
   transition: all ease-in-out 0.2s;
+}
+
+.plantsInfoBox ul li {
+  padding: 1rem;
+  border-top: 3px solid #000000;
 }
 
 footer {

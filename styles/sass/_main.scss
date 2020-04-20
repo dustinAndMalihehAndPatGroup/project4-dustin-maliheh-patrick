@@ -96,4 +96,12 @@ main {
 	box-shadow: 11px 11px $accent-color;
 	transition: all ease-in-out 0.2s;
 }
-
+.plantsInfoBox {
+	ul{
+		li{
+			padding:1rem;
+			border-top: 3px solid $dark-color;
+			// background-color: #b6c4c2;
+		}
+	}
+}
