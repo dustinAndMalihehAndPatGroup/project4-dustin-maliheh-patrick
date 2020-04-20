@@ -139,10 +139,9 @@ plantApp.search = () => {
 				distance: 5,
 			});
 		} else {
-			console.log(plantApp.userSearch);
-			plantApp.retrieveData();
 			$('.animeText').addClass('hidden');
 			$('.plantWrapper').empty();
+			plantApp.retrieveData();
 			$('#searchPlants').val('');
 		}
 	});
