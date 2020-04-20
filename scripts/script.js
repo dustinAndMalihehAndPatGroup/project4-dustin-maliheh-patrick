@@ -143,6 +143,7 @@ plantApp.search = () => {
 			plantApp.retrieveData();
 			$('.animeText').addClass('hidden');
 			$('.plantWrapper').empty();
+			$('#searchPlants').val('');
 		}
 	});
 };
