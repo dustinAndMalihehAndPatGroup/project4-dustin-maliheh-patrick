@@ -16,7 +16,11 @@ plantApp.retrieveData = () => {
 				format: `json`,
 				q: plantApp.userSearch,
 				complete_data: true,
+<<<<<<< HEAD
+				page_size: 10
+=======
 				page_size: 10,
+>>>>>>> master
 			},
 		},
 	}).then((request) => {
@@ -75,12 +79,12 @@ plantApp.displayContentToPage = () => {
 					: (plantImage = '.../../imgs/missingImage.jpg');
 
 				const htmlBox = `
-			<div class="plantsInfoBox">
+			<div class="plantsInfoBox" tabindex="0">
 				<div class=topText>
 					<h2>${plantObject.common_name}</h2>
 					<h3>- ${plantObject.scientific_name} -</h3>
 				</div>	
-                    <img src="${plantImage}" alt="cool alt tag">
+                    <a href="${plantObject.main_species.sources[0].source_url}"><img src="${plantImage}" alt="${plantObject.common_name}"></a>
 					<ul>
                         <li>More Info: <span><a href="${plantObject.main_species.sources[0].source_url}">${plantObject.main_species.sources[0].source_url}</a></span></li>
                         <li>Native Statues: <span>${plantObject.native_status}</span></li>
