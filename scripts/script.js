@@ -53,7 +53,7 @@ plantApp.secondCall = () => {
 					format: `json`,
 				},
 			},
-		});
+		}).catch((e) => null);
 	});
 	console.log(plantApp.storedPromises);
 	plantApp.displayContentToPage();
@@ -61,18 +61,18 @@ plantApp.secondCall = () => {
 
 // Takes the promises from the 2nd api call spreads them and then loops over each one to display the info to the user
 plantApp.displayContentToPage = () => {
-	$.when(...plantApp.storedPromises)
-		.then((...getValues) => {
-			const justTheGoodStuff = getValues.map((miniArray) => {
-				return miniArray[0];
-			});
+	let all = Promise.all(plantApp.storedPromises);
+	all
+		.then((getValues) => {
+			const justTheGoodStuff = getValues.filter((items) => items != null);
+			console.log(justTheGoodStuff, 'good stuff');
+
 			justTheGoodStuff.forEach((plantObject) => {
 				let plantImage = plantObject.images;
 				// checks if there are any images in the array
 				plantImage.length > 0
 					? (plantImage = plantObject.images[0].url)
 					: (plantImage = '.../../imgs/missingImage.jpg');
-
 				const htmlBox = `
 			<div class="plantsInfoBox" tabindex="0">
 				<div class=topText>
@@ -82,10 +82,13 @@ plantApp.displayContentToPage = () => {
                     <a href="${plantObject.main_species.sources[0].source_url}"><img src="${plantImage}" alt="${plantObject.common_name}"></a>
 					<ul>
                         <li>More Info: <span><a href="${plantObject.main_species.sources[0].source_url}">${plantObject.main_species.sources[0].source_url}</a></span></li>
-                        <li>Native Statues: <span>${plantObject.native_status}</span></li>
+						<li>Native Statues: <span>${plantObject.native_status}</span></li>
+						<li>Fire Tolerance: <span>${plantObject.main_species.growth.fire_tolerance}</span></li>
+						<li>Moisture Use: <span>${plantObject.main_species.growth.moisture_use}</span></li>
                     </ul>
 				</div>
 			`;
+
 				$('.plantWrapper').append(htmlBox);
 			});
 		})
@@ -156,6 +159,14 @@ plantApp.displayLoadingScreen = () => {
 	});
 };
 
+plantApp.checkForNull = (value) => {
+	if (value === null) {
+		value = 'Unknown';
+	} else {
+		value = value;
+	}
+};
+
 plantApp.init = () => {
 	plantApp.search();
 	plantApp.displayLoadingScreen();
@@ -165,3 +176,28 @@ plantApp.init = () => {
 $(function () {
 	plantApp.init();
 });
+
+// $(function () {
+// 	// Create an array of URLs
+// 	let items = [
+// 		'https://pokeapi.co/api/v2/pokemon/2/',
+// 		'https://pokeapi.co/api/v2/pokemon/ditto/',
+// 		'https://pokeapi.co/api/v2/pokemon/badbadbadbaddddddd/',
+// 	];
+// 	// Create a map of promises and return null if there is an error with any of them.
+// 	let promises = items.map((url) => {
+// 		return $.ajax(url).catch((e) => null);
+// 	});
+// 	// Use Promise.all to wait for all of them to resolve, there will be no errors
+// 	// because we are essentially 'suppressing them' in the above code
+// 	// we immediately call
+// 	let all = Promise.all(promises);
+// 	all
+// 		.then((data) => {
+// 			// these data will include 'null' for any calls that have failed,
+// 			console.log(data, 'data?');
+// 		})
+// 		.catch((e) => {
+// 			console.log(e);
+// 		});
+// });
