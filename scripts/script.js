@@ -15,8 +15,8 @@ plantApp.retrieveData = () => {
 				token: plantApp.apiToken,
 				format: `json`,
 				q: plantApp.userSearch,
-				// complete_data: true,
-				page_size: 10
+				complete_data: true,
+				page_size: 10,
 			},
 		},
 	}).then((request) => {
@@ -131,10 +131,19 @@ plantApp.search = () => {
 	$('#searchSomething').on('click', function (e) {
 		e.preventDefault();
 		plantApp.userSearch = $('#searchPlants').val();
-		console.log(plantApp.userSearch);
-		plantApp.retrieveData();
-		$('.animeText').addClass('hidden');
-		$('.plantWrapper').empty();
+
+		if (plantApp.userSearch.length < 1) {
+			$('#searchPlants').effect('shake', {
+				direction: 'up',
+				times: 3,
+				distance: 5,
+			});
+		} else {
+			console.log(plantApp.userSearch);
+			plantApp.retrieveData();
+			$('.animeText').addClass('hidden');
+			$('.plantWrapper').empty();
+		}
 	});
 };
 
