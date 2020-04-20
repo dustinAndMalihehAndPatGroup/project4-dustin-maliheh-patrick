@@ -64,7 +64,7 @@ plantApp.displayContentToPage = () => {
 	let all = Promise.all(plantApp.storedPromises);
 	all
 		.then((getValues) => {
-			let justTheGoodStuff = getValues;
+			const justTheGoodStuff = getValues.filter((items) => items != null);
 			console.log(justTheGoodStuff, 'good stuff');
 
 			justTheGoodStuff.forEach((plantObject) => {
@@ -94,6 +94,7 @@ plantApp.displayContentToPage = () => {
 		})
 		.catch((err) => {
 			console.log(err);
+			$('.animeText').text(`Something Went Wrong, Try Again`).show();
 		});
 };
 plantApp.animation = () => {
