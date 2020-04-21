@@ -89,10 +89,12 @@ main {
 }
 .plantsInfoBox {
 	ul {
-		li {
+		li:first-child {
 			padding: 1rem;
 			border-top: 3px solid $dark-color;
-			// background-color: #b6c4c2;
+		}
+		li {
+			padding: 1rem;
 		}
 	}
 }
