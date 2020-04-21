@@ -489,9 +489,13 @@ main {
   transition: all ease-in-out 0.2s;
 }
 
-.plantsInfoBox ul li {
+.plantsInfoBox ul li:first-child {
   padding: 1rem;
   border-top: 3px solid #000000;
+}
+
+.plantsInfoBox ul li {
+  padding: 1rem;
 }
 
 footer {
