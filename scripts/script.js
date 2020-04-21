@@ -42,7 +42,7 @@ plantApp.firstCall = (getLink) => {
 plantApp.secondCall = () => {
 	plantApp.storedPromises = plantApp.idArray.map((submitUrl) => {
 		return $.ajax({
-			url: `http://proxy.hackeryou.com`,
+			url: `https://proxy.hackeryou.com`,
 			method: `GET`,
 			dataType: `json`,
 			data: {
