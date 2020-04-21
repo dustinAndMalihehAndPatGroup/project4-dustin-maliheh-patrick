@@ -6,7 +6,7 @@ plantApp.baseUrl = `http://trefle.io/api/plants`;
 
 plantApp.retrieveData = () => {
 	$.ajax({
-		url: `http://proxy.hackeryou.com`,
+		url: `https://proxy.hackeryou.com`,
 		method: `GET`,
 		dataType: `json`,
 		data: {
