@@ -65,18 +65,19 @@ plantApp.displayContentToPage = () => {
 			const justTheGoodStuff = getValues.filter((items) => items != null);
 
 			justTheGoodStuff.forEach((plantObject) => {
-				let moistureUse = plantApp.checkNull(
+				let moisture = plantApp.checkNull(
 					plantObject.main_species.growth.moisture_use
 				);
 				let fire = plantApp.checkNull(
 					plantObject.main_species.growth.fire_tolerance
 				);
+				let native = plantApp.checkNull(plantObject.native_status);
 
 				let plantImage = plantObject.images;
 				// checks if there are any images in the array
 				plantImage.length > 0
 					? (plantImage = plantObject.images[0].url)
-					: (plantImage = '.../../imgs/missingImage.jpg');
+					: (plantImage = '../../imgs/missingImage.jpg');
 
 				const htmlBox = `
 			<div class="plantsInfoBox" tabindex="0">
@@ -87,9 +88,9 @@ plantApp.displayContentToPage = () => {
                     <a href="${plantObject.main_species.sources[0].source_url}"><img src="${plantImage}" alt="${plantObject.common_name}"></a>
 					<ul>
                         <li>More Info: <span><a href="${plantObject.main_species.sources[0].source_url}">${plantObject.main_species.sources[0].source_url}</a></span></li>
-						<li>Native Statues: <span>${plantObject.native_status}</span></li>
+						<li>Native Statues: <span>${native}</span></li>
 						<li>Fire Tolerance: <span>${fire}</span></li>
-						<li>Moisture Use: <span>${moistureUse}</span></li>
+						<li>Moisture Use: <span>${moisture}</span></li>
                     </ul>
 				</div>
 			`;
@@ -104,13 +105,7 @@ plantApp.displayContentToPage = () => {
 };
 
 // Checks for nulls and replaces the value with Unknown
-plantApp.checkNull = (str) => {
-	if (str) {
-		return str;
-	} else {
-		return 'Unknown';
-	}
-};
+plantApp.checkNull = (str) => (str ? str : 'Unknown');
 
 plantApp.animation = () => {
 	const textWrapper = document.querySelector('p');
