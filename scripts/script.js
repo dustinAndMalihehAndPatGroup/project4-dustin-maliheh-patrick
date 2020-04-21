@@ -99,7 +99,6 @@ plantApp.displayContentToPage = () => {
 			});
 		})
 		.catch((err) => {
-			console.log(err);
 			$('.animeText').text(`Something Went Wrong, Try Again`).show();
 		});
 };
