@@ -20,5 +20,16 @@
     
 }
 
-// Around 450px header h1 
+@media(max-width:473px){
+     header {
+        input[type='text'] {
+            width:80%
+	    }
+
+        .btn{
+            width:80%;
+            margin-top:2rem;
+        }
+     }
+}
 
