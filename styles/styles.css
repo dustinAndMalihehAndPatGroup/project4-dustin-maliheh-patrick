@@ -528,3 +528,13 @@ footer {
     margin-left: 15%;
   }
 }
+
+@media (max-width: 473px) {
+  header input[type='text'] {
+    width: 80%;
+  }
+  header .btn {
+    width: 80%;
+    margin-top: 2rem;
+  }
+}
