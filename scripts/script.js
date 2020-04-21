@@ -77,7 +77,7 @@ plantApp.displayContentToPage = () => {
 				// checks if there are any images in the array
 				plantImage.length > 0
 					? (plantImage = plantObject.images[0].url)
-					: (plantImage = '../imgs/missingImage.jpg');
+					: (plantImage = './imgs/missingImage.jpg');
 
 				const htmlBox = `
 			<div class="plantsInfoBox" tabindex="0">
