@@ -1,35 +1,36 @@
-@media(max-width:1145px){
-
-    .plantWrapper{
-        grid-template-columns: repeat(2, 1fr);
-    }
+@media (max-width: 1145px) {
+	.plantWrapper {
+		grid-template-columns: repeat(2, 1fr);
+	}
 }
 
+@media (max-width: 760px) {
+	.plantWrapper {
+		grid-template-columns: repeat(1, 1fr);
+	}
 
-@media(max-width:760px){
-   
-    .plantWrapper{
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .plantsInfoBox{
-        width: 70%;
-        margin-right: 15%;
-        margin-left: 15%;
-    }
-    
+	.plantsInfoBox {
+		width: 70%;
+		margin-right: 15%;
+		margin-left: 15%;
+	}
+	header h1 {
+		font-size: 5rem;
+	}
 }
 
-@media(max-width:473px){
-     header {
-        input[type='text'] {
-            width:80%
-	    }
+@media (max-width: 473px) {
+	header {
+		input[type='text'] {
+			width: 80%;
+			&::placeholder {
+				text-align: center;
+			}
+		}
 
-        .btn{
-            width:80%;
-            margin-top:2rem;
-        }
-     }
+		.btn {
+			width: 80%;
+			margin-top: 2rem;
+		}
+	}
 }
-

@@ -72,6 +72,7 @@ plantApp.displayContentToPage = () => {
 					plantObject.main_species.growth.fire_tolerance
 				);
 				let native = plantApp.checkNull(plantObject.native_status);
+				let nativeEdit = native.replace(/\([NI]\)/gi, ', ');
 
 				let plantImage = plantObject.images;
 				// checks if there are any images in the array
@@ -88,7 +89,7 @@ plantApp.displayContentToPage = () => {
                     <a href="${plantObject.main_species.sources[0].source_url}"><img src="${plantImage}" alt="${plantObject.common_name}"></a>
 					<ul>
                         <li>More Info: <span><a href="${plantObject.main_species.sources[0].source_url}">${plantObject.main_species.sources[0].source_url}</a></span></li>
-						<li>Native Statues: <span>${native}</span></li>
+						<li>Native Statues: <span>${nativeEdit}</span></li>
 						<li>Fire Tolerance: <span>${fire}</span></li>
 						<li>Moisture Use: <span>${moisture}</span></li>
                     </ul>

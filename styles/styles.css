@@ -389,6 +389,22 @@ header input[type='text'] {
   padding: 16.5px 20px 9px 20px;
 }
 
+header input[type='text']::-webkit-input-placeholder {
+  font-size: 1.5rem;
+}
+
+header input[type='text']:-ms-input-placeholder {
+  font-size: 1.5rem;
+}
+
+header input[type='text']::-ms-input-placeholder {
+  font-size: 1.5rem;
+}
+
+header input[type='text']::placeholder {
+  font-size: 1.5rem;
+}
+
 header button[type='submit'] {
   margin-left: -0.5rem;
   font-family: "Vollkorn", serif;
@@ -474,7 +490,7 @@ main {
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(255, 255, 255, 0.9) url("../imgs/loader.gif") 50% 50% no-repeat;
+  background: rgba(255, 255, 255, 0.9) url("./imgs/loader.gif") 50% 50% no-repeat;
 }
 
 .loading .modal {
@@ -496,6 +512,7 @@ main {
 
 .plantsInfoBox ul li {
   padding: 1rem;
+  line-height: 1.6;
 }
 
 footer {
@@ -527,11 +544,26 @@ footer {
     margin-right: 15%;
     margin-left: 15%;
   }
+  header h1 {
+    font-size: 5rem;
+  }
 }
 
 @media (max-width: 473px) {
   header input[type='text'] {
     width: 80%;
+  }
+  header input[type='text']::-webkit-input-placeholder {
+    text-align: center;
+  }
+  header input[type='text']:-ms-input-placeholder {
+    text-align: center;
+  }
+  header input[type='text']::-ms-input-placeholder {
+    text-align: center;
+  }
+  header input[type='text']::placeholder {
+    text-align: center;
   }
   header .btn {
     width: 80%;
