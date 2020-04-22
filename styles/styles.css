@@ -490,7 +490,7 @@ main {
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(255, 255, 255, 0.9) url("./imgs/loader.gif") 50% 50% no-repeat;
+  background: rgba(255, 255, 255, 0.9) url("../imgs/loader.gif") 50% 50% no-repeat;
 }
 
 .loading .modal {
